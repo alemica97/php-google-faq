@@ -1,28 +1,162 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: currentColor;
+}
 .container{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 30px 20px;
+    color: rgba(0, 0, 0, 0.87);
 }
 
 h2, h3{
     margin-top: 80px;
+    font-size: 24px;
+    color: #3c4043;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 p{
     margin-top: 25px;
 }
 
+ul, ol{
+    padding-left: 15px;
+}
+
 ul{
     list-style-type: lower-latin;
-    padding-left: 25px;
 }
 
 li{
     margin-top: 20px;
+}
+
+ol li{
+    padding-left: 15px;
+}
+
+.logo{
+    width: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    padding: 20px 18px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #5f6368;
+}
+
+.privacy{
+    font-size: 22px;
+    font-weight: 400;
+    padding-left: 5px;
+    flex-grow: 1;
+}
+
+.profile{
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    display:inline-block;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.user-menu i{
+    font-size: 25px;
+}
+
+.user-menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-list{
+    list-style-type: none;
+    display: contents;
+}
+
+.nav-list li{
+    margin-top: 0px;
+    padding: 0 0 10px 0;
+}
+
+.nav-list li.active{
+    color: #3367d6;
+    border-bottom: 3px solid #3367d6;
+    padding: 0 0 7px 0;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #5f6368;
+    padding: 0 18px;
+    border-bottom: 1px solid #ccc;
+}
+
+.container-fluid{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+}
+
+main{
+    padding: 130px 0;
+}
+
+footer{
+    background-color: #f5f5f5;
+    padding: 10px 0;
+}
+
+.container.foot ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.container.foot li{
+    margin-top: 0px;
+}
+
+.container.foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 100;
+    color: #5f6368;
 }

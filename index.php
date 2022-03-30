@@ -54,28 +54,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Google FAQ</title>
 </head>
 <body>
-    <div class="container">
-
+    <div class="container-fluid">
+        <header>
+            <figure class="logo">
+                <img src="img/logo-google.png" alt="">
+            </figure>
+            <span class="privacy"><a href="">Privacy e termini</a></span>
+            <div class="user-menu">
+                <i class="fas fa-grip-vertical"></i>
+                <figure class="profile">
+                    <img src="img/user.jpg" alt="">
+                </figure>
+            </div>
+        </header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="">Introduzione</a></li>
+                <li><a href="">Norme sulla privacy</a></li>
+                <li><a href="">Termini di servizio</a></li>
+                <li><a href="">Tecnologie</a></li>
+                <li class="active"><a href="">Domande frequenti</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
         <section>
-            <?php
-                for($i = 0; $i < count($array_faq); $i++){
-                    foreach($array_faq[$i] as $x => $x_value){
-                        if($x == 'domanda'){
-                        ?>
-                        <h2><?php echo $x_value; ?></h2>
-                        <?php
-                        }elseif($x == 'risposta'){
-                            echo $x_value;
+            <div class="container">
+                <?php
+                    for($i = 0; $i < count($array_faq); $i++){
+                        foreach($array_faq[$i] as $x => $x_value){
+                            if($x == 'domanda'){
+                            ?>
+                            <h2><?php echo $x_value; ?></h2>
+                            <?php
+                            }elseif($x == 'risposta'){
+                                echo $x_value;
+                            }
                         }
                     }
-                }
-            ?>
+                ?>
+            </div>
         </section>
+    </main>
+    <footer>
+        <div class="container foot">
+            <ul>
+                <li><a href="">Goolge</a></li>
+                <li><a href="">Tutto su Google</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Termini</a></li>
+            </ul>
+            <select name="lingua" id="lingua">
+                <option value="it">Italiano</option>
+                <option value="en">Inglese</option>
+            </select>
+        </div>
+    </footer>
 
-    </div>
 </body>
 </html>
